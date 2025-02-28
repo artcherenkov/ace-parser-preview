@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" version="1.10" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" version="1.10">
     <xs:simpleType name="TAccessLevel">
         <xs:restriction base="xs:string">
             <xs:enumeration value="общедоступная информация"/>
@@ -155,7 +155,7 @@
                     <xs:documentation>Регистрационный номер в федеральном реестре сметных нормативов</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element minOccurs="0" name="Orders" type="xs:string">
+            <xs:element name="Orders" type="xs:string" minOccurs="0">
                 <xs:annotation>
                     <xs:documentation>Реквизиты приказов об утверждении</xs:documentation>
                 </xs:annotation>
@@ -180,7 +180,7 @@
                     <xs:documentation>Исходное значение индекса</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="Coefficients" minOccurs="0" type="TCoefficients">
+            <xs:element name="Coefficients" type="TCoefficients" minOccurs="0">
                 <xs:annotation>
                     <xs:documentation>Коэффициенты, применяемые к значению индекса</xs:documentation>
                 </xs:annotation>
@@ -419,7 +419,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="Coefficients" minOccurs="0" type="TCoefficients">
+            <xs:element name="Coefficients" type="TCoefficients" minOccurs="0">
                 <xs:annotation>
                     <xs:documentation>
                         <text>Коэффициенты к норме, учитывающие изменения.
@@ -904,7 +904,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element minOccurs="0" name="Commissioning">
+            <xs:element name="Commissioning" minOccurs="0">
                 <xs:annotation>
                     <xs:documentation>
                         <text>Стоимость пусконаладочных работ по ЛСР в текущем и базовом уровнях цен в виде разделения
@@ -920,7 +920,7 @@
                 </xs:annotation>
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element name="UnderLoad" maxOccurs="1" minOccurs="0">
+                        <xs:element name="UnderLoad" minOccurs="0" maxOccurs="1">
                             <xs:annotation>
                                 <xs:documentation>
                                     <text>Пусконаладочные работы "под нагрузкой")</text>
@@ -943,8 +943,7 @@
                             </xs:annotation>
                             <xs:complexType>
                                 <xs:sequence>
-                                    <xs:element maxOccurs="unbounded" minOccurs="0" name="Item"
-                                            type="TComissioning"/>
+                                    <xs:element name="Item" type="TComissioning" minOccurs="0" maxOccurs="unbounded"/>
                                     <xs:element name="TotalBase" type="xs:decimal">
                                         <xs:annotation>
                                             <xs:documentation>
@@ -996,7 +995,7 @@
                                 </xs:sequence>
                             </xs:complexType>
                         </xs:element>
-                        <xs:element name="Idle" maxOccurs="1" minOccurs="0">
+                        <xs:element name="Idle" minOccurs="0" maxOccurs="1">
                             <xs:annotation>
                                 <xs:documentation>
                                     <text>Пусконаладочные работы "вхолостую"</text>
@@ -1019,8 +1018,7 @@
                             </xs:annotation>
                             <xs:complexType>
                                 <xs:sequence>
-                                    <xs:element maxOccurs="unbounded" minOccurs="0" name="Item"
-                                            type="TComissioning"/>
+                                    <xs:element name="Item" type="TComissioning" minOccurs="0" maxOccurs="unbounded"/>
                                     <xs:element name="TotalBase" type="xs:decimal">
                                         <xs:annotation>
                                             <xs:documentation>
@@ -2434,8 +2432,7 @@
                                 </xs:documentation>
                             </xs:annotation>
                         </xs:element>
-                        <xs:element name="Coefficient" maxOccurs="unbounded"
-                                type="TResCoefficientDetail">
+                        <xs:element name="Coefficient" type="TResCoefficientDetail" maxOccurs="unbounded">
                             <xs:annotation>
                                 <xs:documentation>
                                     <text>Коэффициент учета условий производства работ, применяемый к стоимости и к
@@ -2457,7 +2454,7 @@
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
-            <xs:element name="Index" maxOccurs="1" type="TResIndex" minOccurs="0">
+            <xs:element name="Index" type="TResIndex" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
                         <text>Индекс изменения сметной стоимости</text>
@@ -2677,8 +2674,7 @@
                                 </xs:documentation>
                             </xs:annotation>
                         </xs:element>
-                        <xs:element name="Coefficient" maxOccurs="unbounded"
-                                type="TResCoefficientDetail">
+                        <xs:element name="Coefficient" type="TResCoefficientDetail" maxOccurs="unbounded">
                             <xs:annotation>
                                 <xs:documentation>
                                     <text>Коэффициент учета условий производства работ, применяемый к стоимости и к
@@ -2700,7 +2696,7 @@
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
-            <xs:element name="Index" maxOccurs="1" type="TResIndex" minOccurs="0">
+            <xs:element name="Index" type="TResIndex" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
                         <text>Индекс изменения сметной стоимости, применяемый к оплате труда</text>
@@ -2976,8 +2972,7 @@
                                 </xs:documentation>
                             </xs:annotation>
                         </xs:element>
-                        <xs:element name="Coefficient" maxOccurs="unbounded"
-                                type="TResCoefficientDetail">
+                        <xs:element name="Coefficient" type="TResCoefficientDetail" maxOccurs="unbounded">
                             <xs:annotation>
                                 <xs:documentation>
                                     <text>Коэффициент учета условий производства работ, применяемый к стоимости и к
@@ -2999,7 +2994,7 @@
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
-            <xs:element name="Index" maxOccurs="1" type="TResIndex" minOccurs="0">
+            <xs:element name="Index" type="TResIndex" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                     <xs:documentation>
                         <text>Индекс изменения сметной стоимости, применяемый к стоимости ресурса</text>
@@ -3019,7 +3014,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="WarehouseCur" minOccurs="0" type="xs:decimal">
+            <xs:element name="WarehouseCur" type="xs:decimal" minOccurs="0">
                 <xs:annotation>
                     <xs:documentation>
                         <text>Заготовительно-складские расходы (в текущем уровне цен). Определяются при составлении
@@ -3036,7 +3031,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="WarehouseBase" minOccurs="0" type="xs:decimal">
+            <xs:element name="WarehouseBase" type="xs:decimal" minOccurs="0">
                 <xs:annotation>
                     <xs:documentation>
                         <text>Заготовительно-складские расходы (в базовом уровне цен). Определяются при составлении
@@ -3063,7 +3058,7 @@
         <xs:complexContent>
             <xs:extension base="TResource">
                 <xs:sequence>
-                    <xs:element name="Machinist" minOccurs="0" type="TMachinist">
+                    <xs:element name="Machinist" type="TMachinist" minOccurs="0">
                         <xs:annotation>
                             <xs:documentation>Машинист, управляющий машиной</xs:documentation>
                         </xs:annotation>
@@ -3139,14 +3134,14 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="Overheads" minOccurs="0" type="TOverhead">
+            <xs:element name="Overheads" type="TOverhead" minOccurs="0">
                 <xs:annotation>
                     <xs:documentation>Накладные расходы позиции в локальном сметном расчете (базисный и текущий уровень
                         цен)
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="Profits" minOccurs="0" type="TProfit">
+            <xs:element name="Profits" type="TProfit" minOccurs="0">
                 <xs:annotation>
                     <xs:documentation>Сметная прибыль позиции в локальном сметном расчете (базисный и текущий уровень
                         цен)
@@ -3330,8 +3325,7 @@
                                                                         </xs:documentation>
                                                                     </xs:annotation>
                                                                 </xs:element>
-                                                                <xs:element name="Reason" type="xs:string"
-                                                                        minOccurs="0">
+                                                                <xs:element name="Reason" type="xs:string" minOccurs="0">
                                                                     <xs:annotation>
                                                                         <xs:documentation>Обоснование коэффициента (шифр
                                                                             коэффициента (при наличии) или ссылка на
@@ -3348,7 +3342,7 @@
                                         </xs:sequence>
                                     </xs:complexType>
                                 </xs:element>
-                                <xs:element name="Index" maxOccurs="1" minOccurs="0">
+                                <xs:element name="Index" minOccurs="0" maxOccurs="1">
                                     <xs:annotation>
                                         <xs:documentation>
                                             <text>Индексы изменения сметной стоимости к элементам затрат локального
@@ -3392,8 +3386,7 @@
                                                 </xs:annotation>
                                                 <xs:complexType>
                                                     <xs:sequence>
-                                                        <xs:element name="Value" maxOccurs="unbounded"
-                                                                type="TCostIndexValue"></xs:element>
+                                                        <xs:element name="Value" type="TCostIndexValue" maxOccurs="unbounded"/>
                                                     </xs:sequence>
                                                 </xs:complexType>
                                             </xs:element>
@@ -3603,8 +3596,7 @@
                                         </xs:documentation>
                                     </xs:annotation>
                                 </xs:element>
-                                <xs:element name="Machine" type="TMachine" minOccurs="1"
-                                        maxOccurs="1">
+                                <xs:element name="Machine" type="TMachine" minOccurs="1" maxOccurs="1">
                                     <xs:annotation>
                                         <xs:documentation>
                                             <text>Ресурс (машины и механизмы) в соответствии с Классификатором
@@ -3746,7 +3738,7 @@
                     </xs:element>
                 </xs:choice>
             </xs:choice>
-            <xs:element minOccurs="0" name="Amendments" type="xs:double">
+            <xs:element name="Amendments" type="xs:double" minOccurs="0">
                 <xs:annotation>
                     <xs:documentation>Сумма поправочных надбавок к стоимости  согласно пунктов общих положений к
                         применению единичных расценок, учитывающих дополнительные условия работ (в рублях).
@@ -3754,7 +3746,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element minOccurs="0" name="LoadPercent" type="xs:double">
+            <xs:element name="LoadPercent" type="xs:double" minOccurs="0">
                 <xs:annotation>
                     <xs:documentation>
                         <text>Доля пусконаладочных работ "под нагрузкой" в % в структуре полного комплекса ПНР, учтенной
@@ -3768,7 +3760,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element minOccurs="0" name="IdlePercent" type="xs:double">
+            <xs:element name="IdlePercent" type="xs:double" minOccurs="0">
                 <xs:annotation>
                     <xs:documentation>
                         <text>Доля пусконаладочных работ "вхолостую" в % в структуре полного комплекса ПНР, учтенной в
@@ -3910,14 +3902,13 @@
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
-            <xs:element minOccurs="0" name="BIMData">
+            <xs:element name="BIMData" minOccurs="0">
                 <xs:annotation>
                     <xs:documentation>Ссылки на элементы BIM модели</xs:documentation>
                 </xs:annotation>
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element maxOccurs="unbounded" minOccurs="0" name="Element"
-                                type="TBIMData">
+                        <xs:element name="Element" type="TBIMData" minOccurs="0" maxOccurs="unbounded">
                             <xs:annotation>
                                 <xs:documentation>Ссылка на элемент BIM модели</xs:documentation>
                             </xs:annotation>
@@ -4127,7 +4118,7 @@
                     <xs:documentation>Порядковый номер индекса изменения сметной стоимости</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="Value" maxOccurs="1" minOccurs="1" type="TIndexValue"></xs:element>
+            <xs:element name="Value" type="TIndexValue" minOccurs="1" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
     <xs:complexType name="TComissioning">
@@ -4340,7 +4331,7 @@
                                                 </xs:documentation>
                                             </xs:annotation>
                                         </xs:element>
-                                        <xs:element minOccurs="0" name="Industry" type="xs:string">
+                                        <xs:element name="Industry" type="xs:string" minOccurs="0">
                                             <xs:annotation>
                                                 <xs:documentation>Отраслевая специфика</xs:documentation>
                                             </xs:annotation>
@@ -4354,8 +4345,7 @@
                                                 </xs:documentation>
                                             </xs:annotation>
                                         </xs:element>
-                                        <xs:element name="PricePerUnit" type="xs:decimal"
-                                                minOccurs="0">
+                                        <xs:element name="PricePerUnit" type="xs:decimal" minOccurs="0">
                                             <xs:annotation>
                                                 <xs:documentation>
                                                     <text>Показатель единичной стоимости на расчетный измеритель
@@ -4381,8 +4371,7 @@
                                                 </xs:documentation>
                                             </xs:annotation>
                                         </xs:element>
-                                        <xs:element name="QuantityUnit" type="xs:string"
-                                                minOccurs="0">
+                                        <xs:element name="QuantityUnit" type="xs:string" minOccurs="0">
                                             <xs:annotation>
                                                 <xs:documentation>Расчетный измеритель конструктивного решения
                                                     (измеритель) по локальному сметному расчету объекта капитального
@@ -4420,23 +4409,18 @@
                                                 <xs:restriction base="xs:string">
                                                     <xs:enumeration value="Отсутствует"/>
                                                     <xs:enumeration value="Индексы к СМР"/>
-                                                    <xs:enumeration
-                                                            value="Индексы к элементам прямых затрат"/>
-                                                    <xs:enumeration
-                                                            value="Индексы к элементам прямых затрат в позиции"
-                                                    />
+                                                    <xs:enumeration value="Индексы к элементам прямых затрат"/>
+                                                    <xs:enumeration value="Индексы к элементам прямых затрат в позиции"/>
                                                 </xs:restriction>
                                             </xs:simpleType>
                                         </xs:element>
-                                        <xs:element name="PriceLevelBase" type="TPriceLevel"
-                                                minOccurs="0">
+                                        <xs:element name="PriceLevelBase" type="TPriceLevel" minOccurs="0">
                                             <xs:annotation>
                                                 <xs:documentation>Базисный уровень цен локального сметного расчета
                                                 </xs:documentation>
                                             </xs:annotation>
                                         </xs:element>
-                                        <xs:element name="PriceLevelCur" type="TPriceLevel"
-                                                minOccurs="0">
+                                        <xs:element name="PriceLevelCur" type="TPriceLevel" minOccurs="0">
                                             <xs:annotation>
                                                 <xs:documentation>Текущий уровень цен локального сметного расчета
                                                 </xs:documentation>
@@ -4449,8 +4433,7 @@
                                                 </xs:documentation>
                                             </xs:annotation>
                                         </xs:element>
-                                        <xs:element name="EstimatePrice" minOccurs="0"
-                                                type="TSummary">
+                                        <xs:element name="EstimatePrice" type="TSummary" minOccurs="0">
                                             <xs:annotation>
                                                 <xs:documentation>Итоговая сметная стоимость локального сметного расчета
                                                     по элементам и видам работ
@@ -4495,8 +4478,7 @@
                                                 </xs:sequence>
                                             </xs:complexType>
                                         </xs:element>
-                                        <xs:element name="Signatures" type="TSignatures"
-                                                minOccurs="0">
+                                        <xs:element name="Signatures" type="TSignatures" minOccurs="0">
                                             <xs:annotation>
                                                 <xs:documentation>Подписи исполнителей, представителей заказчика и
                                                     подрядчика
@@ -4508,7 +4490,7 @@
                                                 <xs:documentation>Разделы локального сметного расчета</xs:documentation>
                                             </xs:annotation>
                                             <xs:complexType>
-                                                <xs:choice maxOccurs="unbounded" minOccurs="1">
+                                                <xs:choice minOccurs="1" maxOccurs="unbounded">
                                                     <xs:element name="Section" maxOccurs="1">
                                                         <xs:annotation>
                                                             <xs:documentation>Раздел локального сметного расчета
@@ -4538,18 +4520,14 @@
                                                                     </xs:annotation>
                                                                     <xs:complexType>
                                                                         <xs:choice maxOccurs="unbounded">
-                                                                            <xs:element name="Item" type="TItem"
-                                                                                    minOccurs="1"
-                                                                                    maxOccurs="unbounded">
+                                                                            <xs:element name="Item" type="TItem" minOccurs="1" maxOccurs="unbounded">
                                                                                 <xs:annotation>
                                                                                     <xs:documentation>Позиция раздела
                                                                                         локального сметного расчета
                                                                                     </xs:documentation>
                                                                                 </xs:annotation>
                                                                             </xs:element>
-                                                                            <xs:element name="String"
-                                                                                    maxOccurs="unbounded"
-                                                                                    type="xs:string" minOccurs="0">
+                                                                            <xs:element name="String" type="xs:string" minOccurs="0" maxOccurs="unbounded">
                                                                                 <xs:annotation>
                                                                                     <xs:documentation>Строка содержащая
                                                                                         справочную информацию в
@@ -4560,8 +4538,7 @@
                                                                         </xs:choice>
                                                                     </xs:complexType>
                                                                 </xs:element>
-                                                                <xs:element name="SectionPrice" minOccurs="1"
-                                                                        type="TSummary">
+                                                                <xs:element name="SectionPrice" type="TSummary" minOccurs="1">
                                                                     <xs:annotation>
                                                                         <xs:documentation>Итоговая сметная стоимость по
                                                                             разделу локального сметного расчета по
@@ -4572,8 +4549,7 @@
                                                             </xs:sequence>
                                                         </xs:complexType>
                                                     </xs:element>
-                                                    <xs:element name="String" maxOccurs="1"
-                                                            type="xs:string" minOccurs="0">
+                                                    <xs:element name="String" type="xs:string" minOccurs="0" maxOccurs="1">
                                                         <xs:annotation>
                                                             <xs:documentation>Строка содержащая справочную информацию в
                                                                 свободной форме
@@ -4589,14 +4565,13 @@
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-                <xs:element minOccurs="0" name="BIMFiles">
+                <xs:element name="BIMFiles" minOccurs="0">
                     <xs:annotation>
                         <xs:documentation>Список прилагаемых IFC файлов</xs:documentation>
                     </xs:annotation>
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element maxOccurs="unbounded" minOccurs="0" name="FileName"
-                                    type="xs:string">
+                            <xs:element name="FileName" type="xs:string" minOccurs="0" maxOccurs="unbounded">
                                 <xs:annotation>
                                     <xs:documentation>Имя IFC файла с путем относительно файла локальной сметы
                                     </xs:documentation>

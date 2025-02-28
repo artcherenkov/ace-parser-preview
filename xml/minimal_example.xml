@@ -47,8 +47,49 @@
                         <PriceBase>800.00</PriceBase>
                         <PriceCurrent>8000.00</PriceCurrent>
                     </Direct>
+                    <!-- Добавляем обязательные элементы -->
+                    <TotalLaborCosts>100.00</TotalLaborCosts>
+                    <LaborCosts>80.00</LaborCosts>
+                    <MachinistLaborCosts>20.00</MachinistLaborCosts>
+                    <TransportTotal>
+                        <PriceBase>0</PriceBase>
+                        <PriceCurrent>0</PriceCurrent>
+                    </TransportTotal>
+                    <TransportAdd>
+                        <PriceBase>0</PriceBase>
+                        <PriceCurrent>0</PriceCurrent>
+                    </TransportAdd>
+                    <Transport>
+                        <PriceBase>0</PriceBase>
+                        <PriceIndex>
+                            <Final>0</Final>
+                            <Value>0</Value>
+                            <IndexName></IndexName>
+                        </PriceIndex>
+                        <PriceCurrent>0</PriceCurrent>
+                    </Transport>
+                    <Price>
+                        <PriceBase>1000.00</PriceBase>
+                        <PriceCurrent>10000.00</PriceCurrent>
+                    </Price>
                 </Summary>
             </EstimatePrice>
+            <!-- Добавляем обязательный элемент Legal -->
+
+            <Legal>
+                <Main>
+                    <Type></Type>
+                    <Num></Num>
+                </Main>
+                <Overheads>
+                    <Type></Type>
+                    <Num></Num>
+                </Overheads>
+                <Profits>
+                    <Type></Type>
+                    <Num></Num>
+                </Profits>
+            </Legal>
             <Sections>
                 <Section>
                     <Code>1</Code>
@@ -75,6 +116,31 @@
                                 <PriceBase>1000.00</PriceBase>
                                 <PriceCurrent>10000.00</PriceCurrent>
                             </Total>
+                            <!-- Добавляем обязательные элементы -->
+                            <TotalLaborCosts>100.00</TotalLaborCosts>
+                            <LaborCosts>80.00</LaborCosts>
+                            <MachinistLaborCosts>20.00</MachinistLaborCosts>
+                            <TransportTotal>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </TransportTotal>
+                            <TransportAdd>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </TransportAdd>
+                            <Transport>
+                                <PriceBase>0</PriceBase>
+                                <PriceIndex>
+                                    <Final>0</Final>
+                                    <Value>0</Value>
+                                    <IndexName></IndexName>
+                                </PriceIndex>
+                                <PriceCurrent>0</PriceCurrent>
+                            </Transport>
+                            <Price>
+                                <PriceBase>1000.00</PriceBase>
+                                <PriceCurrent>10000.00</PriceCurrent>
+                            </Price>
                         </Summary>
                     </SectionPrice>
                 </Section>
