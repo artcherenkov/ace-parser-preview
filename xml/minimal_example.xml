@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<Construction xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
+    <Meta>
+        <Soft>
+            <Name>Тестовая программа</Name>
+            <Version>1.0</Version>
+        </Soft>
+        <File>
+            <Type>ЛС</Type>
+            <Version>1.10</Version>
+        </File>
+    </Meta>
+    <Num>1</Num>
+    <Name>Тестовая стройка</Name>
+    <Object>
+        <Num>1/1</Num>
+        <Name>Тестовый объект</Name>
+        <Region>
+            <Code>77</Code>
+            <Name>77 - г. Москва</Name>
+        </Region>
+        <Estimate>
+            <Num>1/1-1</Num>
+            <Name>Тестовая смета</Name>
+            <Date>
+                <Year>2024</Year>
+                <Month>01</Month>
+                <Day>01</Day>
+            </Date>
+            <EstimateType>Строительство</EstimateType>
+            <IndexType>Индексы к элементам прямых затрат</IndexType>
+            <PriceLevelBase>
+                <Year>2000</Year>
+                <Month>1</Month>
+            </PriceLevelBase>
+            <PriceLevelCur>
+                <Year>2023</Year>
+                <Quarter>4</Quarter>
+            </PriceLevelCur>
+            <EstimatePrice>
+                <Summary>
+                    <Total>
+                        <PriceBase>1000.00</PriceBase>
+                        <PriceCurrent>10000.00</PriceCurrent>
+                    </Total>
+                    <Direct>
+                        <PriceBase>800.00</PriceBase>
+                        <PriceCurrent>8000.00</PriceCurrent>
+                    </Direct>
+                </Summary>
+            </EstimatePrice>
+            <Sections>
+                <Section>
+                    <Code>1</Code>
+                    <Name>Тестовый раздел</Name>
+                    <Items>
+                        <Item>
+                            <SummaryType>Строительные</SummaryType>
+                            <WorkType>Строительные</WorkType>
+                            <Cost>
+                                <Num>1</Num>
+                                <Code>Test-01</Code>
+                                <Name>Тестовая позиция</Name>
+                                <Quantity>10.0</Quantity>
+                                <Unit>шт</Unit>
+                                <Totals>
+                                    <Base>1000.00</Base>
+                                </Totals>
+                            </Cost>
+                        </Item>
+                    </Items>
+                    <SectionPrice>
+                        <Summary>
+                            <Total>
+                                <PriceBase>1000.00</PriceBase>
+                                <PriceCurrent>10000.00</PriceCurrent>
+                            </Total>
+                        </Summary>
+                    </SectionPrice>
+                </Section>
+            </Sections>
+        </Estimate>
+    </Object>
+</Construction>
