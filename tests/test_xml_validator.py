@@ -1,7 +1,7 @@
 # tests/test_xml_validator.py
-
-import os
 import pytest
+from lxml import etree
+
 from validators.xml_validator import load_xsd_schema, validate_xml_file, validate_xml_string, ValidationError
 
 # Пути к тестовым файлам

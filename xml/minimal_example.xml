@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<Construction xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
+<Construction xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema-beautified.xsd">
     <Meta>
         <Soft>
             <Name>Тестовая программа</Name>
@@ -47,7 +47,6 @@
                         <PriceBase>800.00</PriceBase>
                         <PriceCurrent>8000.00</PriceCurrent>
                     </Direct>
-                    <!-- Добавляем обязательные элементы -->
                     <TotalLaborCosts>100.00</TotalLaborCosts>
                     <LaborCosts>80.00</LaborCosts>
                     <MachinistLaborCosts>20.00</MachinistLaborCosts>
@@ -74,52 +73,268 @@
                     </Price>
                 </Summary>
             </EstimatePrice>
-            <!-- Добавляем обязательный элемент Legal -->
-
             <Legal>
                 <Main>
-                    <Type></Type>
-                    <Num></Num>
+                    <Type>ГСН</Type>
+                    <Num>1111</Num>
                 </Main>
                 <Overheads>
-                    <Type></Type>
-                    <Num></Num>
+                    <Type>ГСН</Type>
+                    <Num>123</Num>
                 </Overheads>
                 <Profits>
-                    <Type></Type>
-                    <Num></Num>
+                    <Type>ИСН</Type>
+                    <Num>456</Num>
                 </Profits>
             </Legal>
             <Sections>
                 <Section>
                     <Code>1</Code>
-                    <Name>Тестовый раздел</Name>
+                    <Name>Стены</Name>
                     <Items>
                         <Item>
                             <SummaryType>Строительные</SummaryType>
                             <WorkType>Строительные</WorkType>
+                            <Overheads>
+                                <Reason>812/пр-8</Reason>
+                                <Name>Конструкции из кирпича и блоков</Name>
+                                <Target>ФОТ</Target>
+                                <Value>110</Value>
+                                <ValueTotal>110</ValueTotal>
+                                <PriceBase>1027.99</PriceBase>
+                                <PriceCur>35261.66</PriceCur>
+                            </Overheads>
+                            <Profits>
+                                <Reason>774/пр-8</Reason>
+                                <Name>Конструкции из кирпича и блоков</Name>
+                                <Target>ФОТ</Target>
+                                <Value>69</Value>
+                                <ValueTotal>69</ValueTotal>
+                                <PriceBase>644.83</PriceBase>
+                                <PriceCur>22118.67</PriceCur>
+                            </Profits>
                             <Cost>
                                 <Num>1</Num>
-                                <Code>Test-01</Code>
-                                <Name>Тестовая позиция</Name>
-                                <Quantity>10.0</Quantity>
-                                <Unit>шт</Unit>
+                                <Prefix>ФЕР</Prefix>
+                                <Code>08-02-001-02</Code>
+                                <Name>Кладка стен кирпичных наружных простых при высоте этажа свыше 4 м</Name>
+                                <Comment/>
+                                <QuantityFormula>[22.540751]{Окр*4}</QuantityFormula>
+                                <Quantity>22.5408</Quantity>
+                                <QuantityTotal>22.5408</QuantityTotal>
+                                <Unit>м3</Unit>
+                                <PerUnit>
+                                    <Base>
+                                        <Direct>68.57</Direct>
+                                        <Machines>30.24</Machines>
+                                        <WorkersSalary>36.73</WorkersSalary>
+                                        <MachinistSalary>4.73</MachinistSalary>
+                                        <Salary>41.46</Salary>
+                                        <Materials>1.6</Materials>
+                                    </Base>
+                                    <Current>
+                                        <Direct>1817.04</Direct>
+                                        <Machines>387.982644</Machines>
+                                        <WorkersSalary>1417.404564</WorkersSalary>
+                                        <MachinistSalary>4.73</MachinistSalary>
+                                        <Salary>1422.134564</Salary>
+                                        <Materials>11.65</Materials>
+                                    </Current>
+                                    <Natural>
+                                        <LaborCosts>4.42</LaborCosts>
+                                        <MachinistLaborCosts>0.35</MachinistLaborCosts>
+                                    </Natural>
+                                </PerUnit>
                                 <Totals>
-                                    <Base>1000.00</Base>
+                                    <Base>
+                                        <Direct>1545.62</Direct>
+                                        <Machines>681.63</Machines>
+                                        <WorkersSalary>827.92</WorkersSalary>
+                                        <MachinistSalary>106.62</MachinistSalary>
+                                        <Salary>934.54</Salary>
+                                        <Materials>36.07</Materials>
+                                    </Base>
+                                    <Current>
+                                        <WorkersSalary>31949.43</WorkersSalary>
+                                        <MachinistSalary>106.62</MachinistSalary>
+                                        <Salary>32056.05</Salary>
+                                    </Current>
+                                    <Natural>
+                                        <LaborCosts>99.630336</LaborCosts>
+                                        <MachinistLaborCosts>7.88928</MachinistLaborCosts>
+                                    </Natural>
                                 </Totals>
+                                <Index>
+                                    <Name/>
+                                    <Reason/>
+                                    <Num>1</Num>
+                                    <Values>
+                                        <Value>
+                                            <Final>38.59</Final>
+                                            <Value>38.59</Value>
+                                            <Target>ОТ</Target>
+                                        </Value>
+                                    </Values>
+                                </Index>
+                                <ResourcesInternal>
+                                    <Worker>
+                                        <Num>1</Num>
+                                        <Code>1</Code>
+                                        <Name>Затраты труда рабочих</Name>
+                                        <Consumption>4.4227</Consumption>
+                                        <Unit>чел.-ч</Unit>
+                                        <ConsumptionTotal>99.630336</ConsumptionTotal>
+                                        <PricePerUnitBase>0</PricePerUnitBase>
+                                        <PriceTotalBase>0</PriceTotalBase>
+                                    </Worker>
+                                    <Worker>
+                                        <Num>2</Num>
+                                        <Code>1.1</Code>
+                                        <Name>Средний разряд работы</Name>
+                                        <Consumption>2.7</Consumption>
+                                        <Unit/>
+                                        <ConsumptionTotal>0</ConsumptionTotal>
+                                        <PricePerUnitBase>0</PricePerUnitBase>
+                                        <PriceTotalBase>0</PriceTotalBase>
+                                    </Worker>
+                                    <Machine>
+                                        <Num>3</Num>
+                                        <Code>91.05.01-017</Code>
+                                        <Name>Краны башенные, грузоподъемность 8 т</Name>
+                                        <Consumption>0.35</Consumption>
+                                        <Unit>маш.-ч.</Unit>
+                                        <ConsumptionTotal>7.88928</ConsumptionTotal>
+                                        <PricePerUnitBase>86.4</PricePerUnitBase>
+                                        <PriceTotalBase>1947.52512</PriceTotalBase>
+                                    </Machine>
+                                    <Material>
+                                        <Num>4</Num>
+                                        <Code>01.7.03.01-0001</Code>
+                                        <Name>Вода</Name>
+                                        <Consumption>0.44</Consumption>
+                                        <Unit>м3</Unit>
+                                        <ConsumptionTotal>9.917952</ConsumptionTotal>
+                                        <PricePerUnitBase>2.44</PricePerUnitBase>
+                                        <PriceTotalBase>54.999552</PriceTotalBase>
+                                    </Material>
+                                    <Material>
+                                        <Num>5</Num>
+                                        <Code>11.1.03.01-0080</Code>
+                                        <Name>Бруски обрезные, хвойных пород, длина 4-6,5 м, ширина 75-150 мм, толщина
+                                            40-75 мм, сорт IV
+                                        </Name>
+                                        <Consumption>0.0005</Consumption>
+                                        <Unit>м3</Unit>
+                                        <ConsumptionTotal>0.0112704</ConsumptionTotal>
+                                        <PricePerUnitBase>1056</PricePerUnitBase>
+                                        <PriceTotalBase>23803.0848</PriceTotalBase>
+                                    </Material>
+                                </ResourcesInternal>
+                                <Resources>
+                                    <Material>
+                                        <Num>1</Num>
+                                        <Code>04.3.01.12</Code>
+                                        <Name>Растворы цементно-известковые</Name>
+                                        <Consumption>0.24</Consumption>
+                                        <Unit>м3</Unit>
+                                        <ConsumptionTotal>5.409792</ConsumptionTotal>
+                                    </Material>
+                                    <Material>
+                                        <Num>2</Num>
+                                        <Code>06.1.01.05</Code>
+                                        <Name>Кирпич керамический или силикатный</Name>
+                                        <Consumption>0.38</Consumption>
+                                        <Unit>1000 шт</Unit>
+                                        <ConsumptionTotal>8.565504</ConsumptionTotal>
+                                    </Material>
+                                </Resources>
                             </Cost>
+                            <Totals>
+                                <Base>3218.44</Base>
+                            </Totals>
+                        </Item>
+                        <Item>
+                            <SummaryType>Строительные</SummaryType>
+                            <WorkType>Строительные</WorkType>
+                            <Material>
+                                <Num>2</Num>
+                                <Code>04.3.01.09-0014</Code>
+                                <Name>Раствор готовый кладочный, цементный, М100</Name>
+                                <Consumption>5.4098</Consumption>
+                                <Unit>м3</Unit>
+                                <PricePerUnitCur>519.8</PricePerUnitCur>
+                                <ConsumptionTotal>5.4098</ConsumptionTotal>
+                                <PricePerUnitBase>519.8</PricePerUnitBase>
+                                <PriceTotalBase>2812.01</PriceTotalBase>
+                            </Material>
+                            <Totals>
+                                <Base>2812.01</Base>
+                            </Totals>
                         </Item>
                     </Items>
                     <SectionPrice>
-                        <Summary>
+                        <Building>
                             <Total>
-                                <PriceBase>1000.00</PriceBase>
-                                <PriceCurrent>10000.00</PriceCurrent>
+                                <PriceBase>31273.28</PriceBase>
+                                <PriceCurrent>305683.78</PriceCurrent>
                             </Total>
-                            <!-- Добавляем обязательные элементы -->
-                            <TotalLaborCosts>100.00</TotalLaborCosts>
-                            <LaborCosts>80.00</LaborCosts>
-                            <MachinistLaborCosts>20.00</MachinistLaborCosts>
+                            <WorkersSalary>
+                                <PriceBase>863.21</PriceBase>
+                                <PriceCurrent>33311.27</PriceCurrent>
+                            </WorkersSalary>
+                            <MachinistSalary>
+                                <PriceBase>107.81</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </MachinistSalary>
+                            <MachinistSalaryExtra>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </MachinistSalaryExtra>
+                            <Salary>
+                                <PriceBase>971.02</PriceBase>
+                                <PriceCurrent>33419.08</PriceCurrent>
+                            </Salary>
+                            <Overhead>
+                                <PriceBase>1068.12</PriceBase>
+                                <PriceCurrent>36760.99</PriceCurrent>
+                            </Overhead>
+                            <Profit>
+                                <PriceBase>670</PriceBase>
+                                <PriceCurrent>23059.16</PriceCurrent>
+                            </Profit>
+                            <MachinesTotal>
+                                <PriceBase>688.39</PriceBase>
+                                <PriceCurrent>8832.04</PriceCurrent>
+                            </MachinesTotal>
+                            <Machines>
+                                <PriceBase>688.39</PriceBase>
+                                <PriceCurrent>8832.04</PriceCurrent>
+                            </Machines>
+                            <Materials>
+                                <Total>
+                                    <PriceBase>27983.56</PriceBase>
+                                    <PriceCurrent>203720.32</PriceCurrent>
+                                </Total>
+                                <Price>
+                                    <PriceBase>27983.56</PriceBase>
+                                    <PriceCurrent>203720.32</PriceCurrent>
+                                </Price>
+                                <External>
+                                    <PriceBase>0</PriceBase>
+                                    <PriceCurrent>0</PriceCurrent>
+                                </External>
+                                <Transport>
+                                    <PriceBase>0</PriceBase>
+                                    <PriceCurrent>0</PriceCurrent>
+                                </Transport>
+                            </Materials>
+                            <Direct>
+                                <PriceBase>29535.16</PriceBase>
+                                <PriceCurrent>245863.63</PriceCurrent>
+                            </Direct>
+                            <TotalLaborCosts>112.0746397</TotalLaborCosts>
+                            <LaborCosts>104.075453</LaborCosts>
+                            <MachinistLaborCosts>7.9991867</MachinistLaborCosts>
                             <TransportTotal>
                                 <PriceBase>0</PriceBase>
                                 <PriceCurrent>0</PriceCurrent>
@@ -133,15 +348,303 @@
                                 <PriceIndex>
                                     <Final>0</Final>
                                     <Value>0</Value>
-                                    <IndexName></IndexName>
+                                    <IndexName/>
                                 </PriceIndex>
                                 <PriceCurrent>0</PriceCurrent>
                             </Transport>
                             <Price>
-                                <PriceBase>1000.00</PriceBase>
-                                <PriceCurrent>10000.00</PriceCurrent>
+                                <PriceBase>31273.28</PriceBase>
+                                <PriceCurrent>305683.78</PriceCurrent>
+                            </Price>
+                        </Building>
+                        <Mounting>
+                            <Total>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </Total>
+                            <WorkersSalary>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </WorkersSalary>
+                            <MachinistSalary>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </MachinistSalary>
+                            <MachinistSalaryExtra>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </MachinistSalaryExtra>
+                            <Salary>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </Salary>
+                            <Overhead>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </Overhead>
+                            <Profit>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </Profit>
+                            <MachinesTotal>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </MachinesTotal>
+                            <Machines>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </Machines>
+                            <Materials>
+                                <Total>
+                                    <PriceBase>0</PriceBase>
+                                    <PriceCurrent>0</PriceCurrent>
+                                </Total>
+                                <Price>
+                                    <PriceBase>0</PriceBase>
+                                    <PriceCurrent>0</PriceCurrent>
+                                </Price>
+                                <External>
+                                    <PriceBase>0</PriceBase>
+                                    <PriceCurrent>0</PriceCurrent>
+                                </External>
+                                <Transport>
+                                    <PriceBase>0</PriceBase>
+                                    <PriceCurrent>0</PriceCurrent>
+                                </Transport>
+                            </Materials>
+                            <Direct>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </Direct>
+                            <TotalLaborCosts>0</TotalLaborCosts>
+                            <LaborCosts>0</LaborCosts>
+                            <MachinistLaborCosts>0</MachinistLaborCosts>
+                            <TransportTotal>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </TransportTotal>
+                            <TransportAdd>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </TransportAdd>
+                            <Transport>
+                                <PriceBase>0</PriceBase>
+                                <PriceIndex>
+                                    <Final>0</Final>
+                                    <Value>0</Value>
+                                    <IndexName/>
+                                </PriceIndex>
+                                <PriceCurrent>0</PriceCurrent>
+                            </Transport>
+                            <Price>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </Price>
+                        </Mounting>
+                        <Equipment>
+                            <Total>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </Total>
+                            <Price>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </Price>
+                            <External>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </External>
+                        </Equipment>
+                        <OtherWorks>
+                            <Total>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </Total>
+                            <WorkersSalary>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </WorkersSalary>
+                            <MachinistSalary>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </MachinistSalary>
+                            <MachinistSalaryExtra>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </MachinistSalaryExtra>
+                            <Salary>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </Salary>
+                            <Overhead>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </Overhead>
+                            <Profit>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </Profit>
+                            <MachinesTotal>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </MachinesTotal>
+                            <Machines>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </Machines>
+                            <Materials>
+                                <Total>
+                                    <PriceBase>0</PriceBase>
+                                    <PriceCurrent>0</PriceCurrent>
+                                </Total>
+                                <Price>
+                                    <PriceBase>0</PriceBase>
+                                    <PriceCurrent>0</PriceCurrent>
+                                </Price>
+                                <External>
+                                    <PriceBase>0</PriceBase>
+                                    <PriceCurrent>0</PriceCurrent>
+                                </External>
+                                <Transport>
+                                    <PriceBase>0</PriceBase>
+                                    <PriceCurrent>0</PriceCurrent>
+                                </Transport>
+                            </Materials>
+                            <Direct>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </Direct>
+                            <TotalLaborCosts>0</TotalLaborCosts>
+                            <LaborCosts>0</LaborCosts>
+                            <MachinistLaborCosts>0</MachinistLaborCosts>
+                            <TransportTotal>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </TransportTotal>
+                            <TransportAdd>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </TransportAdd>
+                            <Transport>
+                                <PriceBase>0</PriceBase>
+                                <PriceIndex>
+                                    <Final>0</Final>
+                                    <Value>0</Value>
+                                    <IndexName/>
+                                </PriceIndex>
+                                <PriceCurrent>0</PriceCurrent>
+                            </Transport>
+                            <Price>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </Price>
+                        </OtherWorks>
+                        <Other>
+                            <PriceBase>0</PriceBase>
+                            <PriceCurrent>0</PriceCurrent>
+                        </Other>
+                        <OtherTotal>
+                            <PriceBase>0</PriceBase>
+                            <PriceCurrent>0</PriceCurrent>
+                        </OtherTotal>
+                        <Commissioning>
+                            <UnderLoad>
+                                <TotalBase>0</TotalBase>
+                                <TotalCur>0</TotalCur>
+                            </UnderLoad>
+                            <Idle>
+                                <TotalBase>0</TotalBase>
+                                <TotalCur>0</TotalCur>
+                            </Idle>
+                        </Commissioning>
+                        <Summary>
+                            <Total>
+                                <PriceBase>31273.28</PriceBase>
+                                <PriceCurrent>305683.78</PriceCurrent>
+                            </Total>
+                            <WorkersSalary>
+                                <PriceBase>863.21</PriceBase>
+                                <PriceCurrent>33311.27</PriceCurrent>
+                            </WorkersSalary>
+                            <MachinistSalary>
+                                <PriceBase>107.81</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </MachinistSalary>
+                            <MachinistSalaryExtra>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </MachinistSalaryExtra>
+                            <Salary>
+                                <PriceBase>971.02</PriceBase>
+                                <PriceCurrent>33419.08</PriceCurrent>
+                            </Salary>
+                            <Overhead>
+                                <PriceBase>1068.12</PriceBase>
+                                <PriceCurrent>36760.99</PriceCurrent>
+                            </Overhead>
+                            <Profit>
+                                <PriceBase>670</PriceBase>
+                                <PriceCurrent>23059.16</PriceCurrent>
+                            </Profit>
+                            <MachinesTotal>
+                                <PriceBase>688.39</PriceBase>
+                                <PriceCurrent>8832.04</PriceCurrent>
+                            </MachinesTotal>
+                            <Machines>
+                                <PriceBase>688.39</PriceBase>
+                                <PriceCurrent>8832.04</PriceCurrent>
+                            </Machines>
+                            <Materials>
+                                <Total>
+                                    <PriceBase>27983.56</PriceBase>
+                                    <PriceCurrent>203720.32</PriceCurrent>
+                                </Total>
+                                <Price>
+                                    <PriceBase>27983.56</PriceBase>
+                                    <PriceCurrent>203720.32</PriceCurrent>
+                                </Price>
+                                <External>
+                                    <PriceBase>0</PriceBase>
+                                    <PriceCurrent>0</PriceCurrent>
+                                </External>
+                                <Transport>
+                                    <PriceBase>0</PriceBase>
+                                    <PriceCurrent>0</PriceCurrent>
+                                </Transport>
+                            </Materials>
+                            <Direct>
+                                <PriceBase>29535.16</PriceBase>
+                                <PriceCurrent>245863.63</PriceCurrent>
+                            </Direct>
+                            <TotalLaborCosts>112.0746397</TotalLaborCosts>
+                            <LaborCosts>104.075453</LaborCosts>
+                            <MachinistLaborCosts>7.9991867</MachinistLaborCosts>
+                            <TransportTotal>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </TransportTotal>
+                            <TransportAdd>
+                                <PriceBase>0</PriceBase>
+                                <PriceCurrent>0</PriceCurrent>
+                            </TransportAdd>
+                            <Transport>
+                                <PriceBase>0</PriceBase>
+                                <PriceIndex>
+                                    <Final>0</Final>
+                                    <Value>0</Value>
+                                    <IndexName/>
+                                </PriceIndex>
+                                <PriceCurrent>0</PriceCurrent>
+                            </Transport>
+                            <Price>
+                                <PriceBase>31273.28</PriceBase>
+                                <PriceCurrent>305683.78</PriceCurrent>
                             </Price>
                         </Summary>
+                        <Total>
+                            <PriceBase>31273.28</PriceBase>
+                            <PriceCurrent>305683.78</PriceCurrent>
+                        </Total>
                     </SectionPrice>
                 </Section>
             </Sections>

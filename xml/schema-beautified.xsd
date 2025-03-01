@@ -4514,9 +4514,7 @@
                                                                 </xs:element>
                                                                 <xs:element name="Items">
                                                                     <xs:annotation>
-                                                                        <xs:documentation>Позиции раздела локального
-                                                                            сметного расчета
-                                                                        </xs:documentation>
+                                                                        <xs:documentation>Позиции раздела локального сметного расчета</xs:documentation>
                                                                     </xs:annotation>
                                                                     <xs:complexType>
                                                                         <xs:choice maxOccurs="unbounded">

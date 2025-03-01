@@ -20,7 +20,8 @@ def main():
     schema_path = "xml/schema.xsd"
     xml_paths = [
         "xml/minimal_example.xml",
-        "xml/multi_section_example.xml"
+        "xml/multi_section_example.xml",
+        "xml/full_example.xml"
     ]
 
     try:

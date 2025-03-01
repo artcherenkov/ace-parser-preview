@@ -1,0 +1,7 @@
+# pyproject.toml
+[tool.xsdata.codegen]
+format = "dataclasses"
+encoding = "utf-8"
+
+[tool.xsdata.codegen.naming]
+enumeration_values = "preserve"
