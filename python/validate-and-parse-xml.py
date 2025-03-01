@@ -5,7 +5,7 @@ from decimal import Decimal
 # Пути к файлам
 xsd_file = '../xml/schema/schema.xsd'  # Путь к вашему XSD-файлу
 xml_file = '../xml/estimates-examples/full_example.xml'  # Путь к вашему XML-файл
-json_file = '../frontend/src/data/raw.json'  # Путь к файлу, куда будут сохранены данные в JSON
+json_file = '../frontend/src/data/sampleEstimate.json'  # Путь к файлу, куда будут сохранены данные в JSON
 
 
 # Определение кастомного энкодера для Decimal
