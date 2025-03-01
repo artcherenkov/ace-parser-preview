@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<Construction xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
+<Construction xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schema/schema.xsd">
     <Meta>
         <Soft>
             <Name>Программный комплекс АВС</Name>
