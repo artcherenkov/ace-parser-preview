@@ -1,9 +1,18 @@
 // src/pages/DashboardPage.tsx
 
 import React, { useEffect, useState } from "react";
-import { EstimateSummary } from "../features/estimateSummary";
-import { transformToEstimateSummaryDTO } from "../features/estimateSummary";
+import {
+  EstimateSummary,
+  transformToEstimateSummaryDTO,
+} from "../features/estimateSummary";
 import type { EstimateSummaryDTO } from "../features/estimateSummary";
+
+import {
+  CostStructure,
+  transformToCostStructureDTO,
+} from "../features/costStructure";
+import type { CostStructureDTO } from "../features/costStructure";
+
 import sampleData from "../data/sampleEstimate.json";
 
 /**
@@ -12,6 +21,9 @@ import sampleData from "../data/sampleEstimate.json";
 const DashboardPage: React.FC = () => {
   const [estimateSummary, setEstimateSummary] =
     useState<EstimateSummaryDTO | null>(null);
+  const [costStructure, setCostStructure] = useState<CostStructureDTO | null>(
+    null,
+  );
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -21,6 +33,10 @@ const DashboardPage: React.FC = () => {
     try {
       const summaryData = transformToEstimateSummaryDTO(sampleData);
       setEstimateSummary(summaryData);
+
+      const costStructureData = transformToCostStructureDTO(sampleData);
+      setCostStructure(costStructureData);
+
       setLoading(false);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Ошибка загрузки данных");
@@ -95,9 +111,13 @@ const DashboardPage: React.FC = () => {
           <h2 className="text-xl font-semibold text-gray-700 mb-4">
             Структура затрат
           </h2>
-          <div className="bg-gray-100 rounded-lg p-12 text-center text-gray-500">
-            Визуализация структуры затрат будет добавлена позже
-          </div>
+          {costStructure ? (
+            <CostStructure data={costStructure} />
+          ) : (
+            <div className="bg-gray-100 rounded-lg p-12 text-center text-gray-500">
+              Данные о структуре затрат не доступны
+            </div>
+          )}
         </section>
 
         <section>
