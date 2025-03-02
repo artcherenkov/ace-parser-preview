@@ -15,7 +15,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
       {/* Боковая панель */}
       <aside className="w-64 bg-slate-800 text-white">
         <div className="p-6">
-          <h1 className="text-xl font-bold">Смета-Аналитик</h1>
+          <h1 className="text-xl font-bold">Анализ Сметы</h1>
         </div>
         <nav>
           <ul className="mt-6">
