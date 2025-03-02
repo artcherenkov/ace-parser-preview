@@ -156,12 +156,6 @@ const DetailedHierarchy: React.FC<DetailedHierarchyProps> = ({ data }) => {
                   <span className="mr-2 text-gray-600">Базисная:</span>
                   <span>{formatCurrency(section.basePrice)}</span>
                 </div>
-                <div className="text-sm hidden md:block">
-                  <span className="mr-2 text-gray-600">Текущая:</span>
-                  <span className="font-medium">
-                    {formatCurrency(section.currentPrice)}
-                  </span>
-                </div>
                 <div className="text-sm">
                   <span className="text-gray-600 mr-2 hidden sm:inline">
                     Индекс:
@@ -223,9 +217,9 @@ const DetailedHierarchy: React.FC<DetailedHierarchyProps> = ({ data }) => {
                         </div>
                         <div className="text-sm">
                           <span className="text-gray-600 hidden lg:inline mr-1">
-                            Текущая:
+                            Базисная:
                           </span>
-                          <span>{formatCurrency(item.currentPrice.total)}</span>
+                          <span>{formatCurrency(item.basePrice.total)}</span>
                         </div>
                       </div>
                     </div>
@@ -263,12 +257,6 @@ const DetailedHierarchy: React.FC<DetailedHierarchyProps> = ({ data }) => {
               <span className="text-sm text-gray-600 mr-2">Базисная:</span>
               <span className="font-medium">
                 {formatCurrency(data.totals.basePrice)}
-              </span>
-            </div>
-            <div>
-              <span className="text-sm text-gray-600 mr-2">Текущая:</span>
-              <span className="font-medium text-blue-600">
-                {formatCurrency(data.totals.currentPrice)}
               </span>
             </div>
             <div>
@@ -329,8 +317,8 @@ const ResourceRow: React.FC<{ resource: ResourceItem }> = ({ resource }) => {
 
       <div className="flex items-center gap-3">
         <span className="text-xs text-gray-500">{resource.consumption}</span>
-        {resource.currentPrice > 0 && (
-          <span>{formatCurrency(resource.currentPrice)}</span>
+        {resource.basePrice > 0 && (
+          <span>{formatCurrency(resource.basePrice)}</span>
         )}
       </div>
     </div>
