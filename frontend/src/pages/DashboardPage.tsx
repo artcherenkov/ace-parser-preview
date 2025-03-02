@@ -1,17 +1,17 @@
 // src/pages/DashboardPage.tsx
 
 import React, { useEffect, useState } from "react";
-import {
-  EstimateSummary,
-  transformToEstimateSummaryDTO,
-} from "../features/estimateSummary";
-import type { EstimateSummaryDTO } from "../features/estimateSummary";
+import { EstimateSummary } from "../features/estimateSummary";
+import { transformToEstimateSummaryDTO } from "../features/estimateSummary/transformers/estimateSummaryTransformer";
+import type { EstimateSummaryDTO } from "../features/estimateSummary/types/EstimateSummaryDTO";
 
-import {
-  CostStructure,
-  transformToCostStructureDTO,
-} from "../features/costStructure";
-import type { CostStructureDTO } from "../features/costStructure";
+import { CostStructure } from "../features/costStructure";
+import { transformToCostStructureDTO } from "../features/costStructure/transformers/costStructureTransformer";
+import type { CostStructureDTO } from "../features/costStructure/types/CostStructureDTO";
+
+import { DetailedHierarchy } from "../features/detailedHierarchy";
+import { transformToDetailedHierarchyDTO } from "../features/detailedHierarchy/transformers/detailedHierarchyTransformer";
+import type { DetailedHierarchyDTO } from "../features/detailedHierarchy/types/DetailedHierarchyDTO";
 
 import sampleData from "../data/sampleEstimate.json";
 
@@ -24,6 +24,8 @@ const DashboardPage: React.FC = () => {
   const [costStructure, setCostStructure] = useState<CostStructureDTO | null>(
     null,
   );
+  const [detailedHierarchy, setDetailedHierarchy] =
+    useState<DetailedHierarchyDTO | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -36,6 +38,9 @@ const DashboardPage: React.FC = () => {
 
       const costStructureData = transformToCostStructureDTO(sampleData);
       setCostStructure(costStructureData);
+
+      const hierarchyData = transformToDetailedHierarchyDTO(sampleData);
+      setDetailedHierarchy(hierarchyData);
 
       setLoading(false);
     } catch (err) {
@@ -124,9 +129,13 @@ const DashboardPage: React.FC = () => {
           <h2 className="text-xl font-semibold text-gray-700 mb-4">
             Разделы сметы
           </h2>
-          <div className="bg-gray-100 rounded-lg p-12 text-center text-gray-500">
-            Сравнение разделов сметы будет добавлено позже
-          </div>
+          {detailedHierarchy ? (
+            <DetailedHierarchy data={detailedHierarchy} />
+          ) : (
+            <div className="bg-gray-100 rounded-lg p-12 text-center text-gray-500">
+              Данные о разделах сметы не доступны
+            </div>
+          )}
         </section>
       </main>
     </div>
