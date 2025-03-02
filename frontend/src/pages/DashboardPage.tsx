@@ -13,6 +13,12 @@ import {
 } from "../features/costStructure";
 import type { CostStructureDTO } from "../features/costStructure";
 
+import {
+  DetailedHierarchy,
+  transformToDetailedHierarchyDTO,
+} from "../features/detailedHierarchy";
+import type { DetailedHierarchyDTO } from "../features/detailedHierarchy";
+
 import sampleData from "../data/sampleEstimate.json";
 
 /**
@@ -24,6 +30,8 @@ const DashboardPage: React.FC = () => {
   const [costStructure, setCostStructure] = useState<CostStructureDTO | null>(
     null,
   );
+  const [detailedHierarchy, setDetailedHierarchy] =
+    useState<DetailedHierarchyDTO | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -36,6 +44,9 @@ const DashboardPage: React.FC = () => {
 
       const costStructureData = transformToCostStructureDTO(sampleData);
       setCostStructure(costStructureData);
+
+      const detailedHierarchyData = transformToDetailedHierarchyDTO(sampleData);
+      setDetailedHierarchy(detailedHierarchyData);
 
       setLoading(false);
     } catch (err) {
@@ -106,7 +117,6 @@ const DashboardPage: React.FC = () => {
           <EstimateSummary data={estimateSummary} />
         </section>
 
-        {/* Здесь будут добавлены другие компоненты для дашборда */}
         <section>
           <h2 className="text-xl font-semibold text-gray-700 mb-4">
             Структура затрат
@@ -122,11 +132,15 @@ const DashboardPage: React.FC = () => {
 
         <section>
           <h2 className="text-xl font-semibold text-gray-700 mb-4">
-            Разделы сметы
+            Детальная структура сметы
           </h2>
-          <div className="bg-gray-100 rounded-lg p-12 text-center text-gray-500">
-            Сравнение разделов сметы будет добавлено позже
-          </div>
+          {detailedHierarchy ? (
+            <DetailedHierarchy data={detailedHierarchy} />
+          ) : (
+            <div className="bg-gray-100 rounded-lg p-12 text-center text-gray-500">
+              Детальные данные сметы не доступны
+            </div>
+          )}
         </section>
       </main>
     </div>
