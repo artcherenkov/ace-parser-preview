@@ -47,5 +47,8 @@ export interface EstimateSummaryDTO {
     basePrice: number; // Сметная прибыль в базисном уровне
     currentPrice: number; // Сметная прибыль в текущем уровне
   };
-  sectionsCount: number; // Количество разделов в смете
+  transport: {
+    basePrice: number; // Транспорт в базисном уровне
+    currentPrice: number; // Транспорт в текущем уровне
+  };
 }

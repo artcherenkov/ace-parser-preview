@@ -16,7 +16,6 @@ export function transformToEstimateSummaryDTO(
 
   const estimate = jsonData.Object.Estimate;
   const summary = estimate.EstimatePrice?.Summary || {};
-  const sections = estimate.Sections?.Section || [];
 
   return {
     metadata: {
@@ -47,16 +46,16 @@ export function transformToEstimateSummaryDTO(
       currentPrice: parseFloat(summary.Direct?.PriceCurrent) || 0,
     },
     labor: {
-      basePrice: parseFloat(summary.WorkersSalary?.PriceBase) || 0,
-      currentPrice: parseFloat(summary.WorkersSalary?.PriceCurrent) || 0,
+      basePrice: parseFloat(summary.Salary?.PriceBase) || 0,
+      currentPrice: parseFloat(summary.Salary?.PriceCurrent) || 0,
     },
     materials: {
       basePrice: parseFloat(summary.Materials?.Total?.PriceBase) || 0,
       currentPrice: parseFloat(summary.Materials?.Total?.PriceCurrent) || 0,
     },
     machinery: {
-      basePrice: parseFloat(summary.Machines?.PriceBase) || 0,
-      currentPrice: parseFloat(summary.Machines?.PriceCurrent) || 0,
+      basePrice: parseFloat(summary.MachinesTotal?.PriceBase) || 0,
+      currentPrice: parseFloat(summary.MachinesTotal?.PriceCurrent) || 0,
     },
     overhead: {
       basePrice: parseFloat(summary.Overhead?.PriceBase) || 0,
@@ -66,7 +65,10 @@ export function transformToEstimateSummaryDTO(
       basePrice: parseFloat(summary.Profit?.PriceBase) || 0,
       currentPrice: parseFloat(summary.Profit?.PriceCurrent) || 0,
     },
-    sectionsCount: Array.isArray(sections) ? sections.length : 1,
+    transport: {
+      basePrice: parseFloat(summary.TransportTotal?.PriceBase) || 0,
+      currentPrice: parseFloat(summary.TransportTotal?.PriceCurrent) || 0,
+    },
   };
 }
 

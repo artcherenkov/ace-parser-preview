@@ -157,14 +157,15 @@ const EstimateSummary: React.FC<EstimateSummaryProps> = ({ data }) => {
             </div>
           </div>
 
-          {/* Количество разделов */}
+          {/* Транспорт */}
           <div className="bg-white rounded-lg shadow p-4">
             <h3 className="text-base font-medium text-gray-700 mb-3">
-              Количество разделов
+              Транспорт
             </h3>
-            <div className="flex justify-center items-center">
-              <span className="text-2xl font-bold text-gray-800">
-                {data.sectionsCount}
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600 text-sm">Текущий уровень</span>
+              <span className="font-medium">
+                {formatCurrency(data.transport.currentPrice)}
               </span>
             </div>
           </div>
